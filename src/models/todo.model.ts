@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 // Copyright IBM Corp. 2018,2020. All Rights Reserved.
 // Node module: @loopback/example-todo
 // This file is licensed under the MIT License.
@@ -5,7 +6,7 @@
 
 import {Entity, model, property} from '@loopback/repository';
 
-@model()
+@model({settings: {scope: {where: {is_deleted: 0}}}})
 export class Todo extends Entity {
   @property({
     type: 'number',
@@ -46,6 +47,11 @@ export class Todo extends Entity {
   })
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tag?: any;
+
+  @property({
+    type: 'number',
+  })
+  is_deleted?: number;
 
   constructor(data?: Partial<Todo>) {
     super(data);
