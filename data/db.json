@@ -1,0 +1,11 @@
+{
+  "ids": {
+    "Todo": 3
+  },
+  "models": {
+    "Todo": {
+      "1": "{\"title\":\"todo\",\"is_deleted\":0,\"id\":1}",
+      "2": "{\"title\":\"todo\",\"is_deleted\":0,\"id\":2}"
+    }
+  }
+}
